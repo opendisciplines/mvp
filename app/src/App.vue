@@ -15,7 +15,9 @@
         </thead>
         <tbody>
           <tr v-for="person in people" :key="person.last_name">
-            <td>{{ person.first_name }} {{ person.last_name }}</td>
+            <td>
+              <a :href="person.url" target="_blank" rel="noopener noreferrer">{{ person.first_name }} {{ person.last_name }}</a>
+            </td>
             <td>{{ person.date }}</td>
             <td class="summary">{{ person.summary }}</td> <!-- Assign a class to this cell for styling -->
             <td>{{ getSpicyEmoji(person.spicy_level) }}</td>
